@@ -1,6 +1,7 @@
 ---
 name: arco-trigger
-description: 通用弹出层触发器，是 Tooltip、Popover、Dropdown 等组件的基础。
+description: Arco Trigger 触发器组件用法与 API。当需要自定义弹出层触发行为（Tooltip/Popover/Dropdown 的基础组件）时使用。
+user-invocable: false
 ---
 
 # Trigger 触发器

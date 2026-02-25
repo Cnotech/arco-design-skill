@@ -1,6 +1,7 @@
 ---
 name: arco-typography
-description: 用于展示标题、段落、文本等排版元素，支持省略、可复制、可编辑。
+description: Arco Typography 排版组件用法与 API。当需要展示标题、段落、文本，或实现文本省略、可复制、可编辑功能时使用。
+user-invocable: false
 ---
 
 # Typography 排版

@@ -1,6 +1,7 @@
 ---
 name: arco-date-picker
-description: 日期/时间选择组件，支持日期、周、月、季度、年选择及范围选择。
+description: Arco DatePicker 日期选择组件用法与 API。当需要选择日期、日期范围、周、月、季度、年或自定义日期面板时使用。
+user-invocable: false
 ---
 
 # DatePicker 日期选择器

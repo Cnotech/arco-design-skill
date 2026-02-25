@@ -1,6 +1,7 @@
 ---
 name: arco-checkbox
-description: Checkbox 复选框
+description: Arco Checkbox 复选框组件用法与 API。当需要多选操作、全选/半选或复选框组时使用。
+user-invocable: false
 ---
 
 # Checkbox 复选框

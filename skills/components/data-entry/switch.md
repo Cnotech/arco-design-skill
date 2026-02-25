@@ -1,6 +1,7 @@
 ---
 name: arco-switch
-description: Switch 开关
+description: Arco Switch 开关组件用法与 API。当需要切换开关状态、带文字或图标的开关时使用。
+user-invocable: false
 ---
 
 # Switch 开关
@@ -34,4 +35,40 @@ import { Switch } from '@arco-design/web-react';
 
 > **在 Form 中使用**：设置 `<Form.Item triggerPropName="checked">` 因为 Switch 使用 `checked` 而非 `value`。
 
+## 常用模式
 
+```tsx
+// 受控
+const [checked, setChecked] = useState(false);
+<Switch checked={checked} onChange={setChecked} />
+
+// 带文字
+<Switch checkedText="开" uncheckedText="关" />
+
+// 带图标
+<Switch checkedIcon={<IconCheck />} uncheckedIcon={<IconClose />} />
+
+// 加载中（异步操作）
+const [loading, setLoading] = useState(false);
+<Switch loading={loading} onChange={async (val) => {
+  setLoading(true);
+  await updateSetting(val);
+  setLoading(false);
+}} />
+
+// 不同尺寸
+<Switch size="small" />
+<Switch />
+<Switch size="small" type="round" />
+
+// 配合 Form
+<Form.Item field="enabled" label="启用" triggerPropName="checked">
+  <Switch />
+</Form.Item>
+```
+
+## 最佳实践
+
+1. **Form 中 Switch 需设 `triggerPropName="checked"`** —— Switch 的值属性是 checked 不是 value
+2. **异步操作用 loading** —— 切换后等待接口返回时显示 loading
+3. **checkedText/uncheckedText 增强语义** —— 让用户明确知道开/关代表什么

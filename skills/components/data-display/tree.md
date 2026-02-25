@@ -1,6 +1,7 @@
 ---
 name: arco-tree
-description: 树形控件，用于展示层级结构数据。
+description: Arco Tree 树形控件组件用法与 API。当需要展示层级结构数据、可勾选树、可拖拽排序或虚拟滚动树时使用。
+user-invocable: false
 ---
 
 # Tree 树

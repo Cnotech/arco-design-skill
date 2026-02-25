@@ -1,6 +1,7 @@
 ---
 name: arco-tag
-description: Tag 标签
+description: Arco Tag 标签组件用法与 API。当需要展示状态标签、可关闭标签或可选中标签时使用。
+user-invocable: false
 ---
 
 # Tag 标签
@@ -34,3 +35,37 @@ import { Tag } from '@arco-design/web-react';
 | `closeIcon` | `ReactNode` | — | 关闭图标 |
 | `onClose` | `(e) => void` | — | 关闭回调 |
 | `onCheck` | `(checked) => void` | — | 选中回调 |
+
+## 常用模式
+
+```tsx
+// 可关闭标签
+<Tag closable onClose={() => removeTag(id)}>标签内容</Tag>
+
+// 可选中标签（筛选场景）
+const [checked, setChecked] = useState(false);
+<Tag.CheckableTag checked={checked} onChange={setChecked}>筛选项</Tag.CheckableTag>
+
+// 多种预设颜色
+{['red', 'orangered', 'orange', 'gold', 'lime', 'green', 'cyan', 'blue', 'arcoblue', 'purple', 'magenta'].map(color => (
+  <Tag key={color} color={color}>{color}</Tag>
+))}
+
+// 动态添加标签
+const [tags, setTags] = useState(['Tag1', 'Tag2']);
+const [inputVisible, setInputVisible] = useState(false);
+<Space>
+  {tags.map(tag => <Tag key={tag} closable onClose={() => setTags(tags.filter(t => t !== tag))}>{tag}</Tag>)}
+  {inputVisible ? (
+    <Input size="mini" autoFocus onPressEnter={(e) => { setTags([...tags, e.target.value]); setInputVisible(false); }} />
+  ) : (
+    <Tag icon={<IconPlus />} onClick={() => setInputVisible(true)}>添加</Tag>
+  )}
+</Space>
+```
+
+## 最佳实践
+
+1. **状态标签用预设颜色** —— 如 success=green、error=red、warning=orange
+2. **CheckableTag 用于筛选** —— 比 Checkbox 更紧凑
+3. **closable 配合列表使用** —— 展示已选项并支持移除

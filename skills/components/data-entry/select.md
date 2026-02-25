@@ -1,6 +1,7 @@
 ---
 name: arco-select
-description: 下拉选择组件，支持单选、多选、搜索、创建、虚拟滚动。
+description: Arco Select 选择器组件用法与 API。当需要下拉选择、多选、搜索选择、远程搜索、分组选项或虚拟滚动长列表时使用。
+user-invocable: false
 ---
 
 # Select 选择器

@@ -1,6 +1,7 @@
 ---
 name: arco-spin
-description: Spin 加载中
+description: Arco Spin 加载中组件用法与 API。当需要展示全局或局部的加载中状态时使用。
+user-invocable: false
 ---
 
 # Spin 加载中

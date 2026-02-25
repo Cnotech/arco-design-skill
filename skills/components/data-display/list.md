@@ -1,6 +1,7 @@
 ---
 name: arco-list
-description: List 列表
+description: Arco List 列表组件用法与 API。当需要展示通栏列表数据、支持分页加载或虚拟滚动时使用。
+user-invocable: false
 ---
 
 # List 列表

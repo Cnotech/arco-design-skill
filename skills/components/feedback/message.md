@@ -1,6 +1,7 @@
 ---
 name: arco-message
-description: 轻量级的操作反馈，显示在页面顶部居中。
+description: Arco Message 全局消息组件用法与 API。当需要在页面顶部显示轻量级的成功、警告、错误等操作反馈时使用。
+user-invocable: false
 ---
 
 # Message 全局提示

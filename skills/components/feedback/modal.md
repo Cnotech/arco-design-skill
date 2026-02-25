@@ -1,6 +1,7 @@
 ---
 name: arco-modal
-description: 模态对话框，用于重要交互确认。
+description: Arco Modal 对话框组件用法与 API。当需要模态弹窗、确认对话框（Modal.confirm）、信息提示或 useModal Hook 时使用。
+user-invocable: false
 ---
 
 # Modal 对话框

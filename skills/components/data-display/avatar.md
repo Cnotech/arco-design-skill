@@ -1,6 +1,7 @@
 ---
 name: arco-avatar
-description: Avatar 头像
+description: Arco Avatar 头像组件用法与 API。当需要展示用户头像、头像组或带徽标的头像时使用。
+user-invocable: false
 ---
 
 # Avatar 头像

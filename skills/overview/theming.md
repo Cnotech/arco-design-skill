@@ -1,6 +1,7 @@
 ---
 name: arco-theming
-description: Arco Design 支持通过 CSS 变量和 Less 变量两种方式进行主题定制。
+description: Arco Design 主题定制指南。当需要自定义主题色、CSS 变量覆盖、Less 变量修改或实现暗色模式切换时使用。
+user-invocable: false
 ---
 
 # 主题定制

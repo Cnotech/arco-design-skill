@@ -1,6 +1,7 @@
 ---
 name: arco-dropdown
-description: Dropdown 下拉菜单
+description: Arco Dropdown 下拉菜单组件用法与 API。当需要创建右键菜单、下拉操作列表或自定义弹出菜单时使用。
+user-invocable: false
 ---
 
 # Dropdown 下拉菜单

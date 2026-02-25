@@ -1,6 +1,7 @@
 ---
 name: arco-pagination
-description: Pagination 分页
+description: Arco Pagination 分页组件用法与 API。当需要单独使用分页器或自定义分页样式时使用。
+user-invocable: false
 ---
 
 # Pagination 分页
@@ -33,3 +34,36 @@ import { Pagination } from '@arco-design/web-react';
 | `itemRender` | `(page, type, originElement) => ReactNode` | — | 自定义页码 |
 | `onChange` | `(pageNumber, pageSize) => void` | — | 页码变化 |
 | `onPageSizeChange` | `(size, current) => void` | — | 每页条数变化 |
+
+## 常用模式
+
+```tsx
+// 受控分页
+const [current, setCurrent] = useState(1);
+<Pagination current={current} total={200} pageSize={20} onChange={setCurrent} />
+
+// 带尺寸切换
+<Pagination
+  total={500}
+  showTotal
+  sizeCanChange
+  sizeOptions={[10, 20, 50, 100]}
+  onPageSizeChange={(size) => setPageSize(size)}
+/>
+
+// 简洁模式
+<Pagination simple total={100} />
+
+// 迷你模式（紧凑场景）
+<Pagination size="mini" total={100} showTotal showJumper />
+
+// 自定义总数展示
+<Pagination total={1000} showTotal={(total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`} />
+```
+
+## 最佳实践
+
+1. **Table 自带 pagination** —— 一般无需单独使用，直接配置 Table 的 pagination 属性
+2. **showTotal 告知总量** —— 让用户了解数据规模
+3. **sizeCanChange 给用户选择权** —— 不同用户偏好不同的每页条数
+4. **simple 模式适合移动端** —— 减少占用空间

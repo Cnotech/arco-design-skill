@@ -1,6 +1,7 @@
 ---
 name: arco-input
-description: 基础文本输入组件，支持前后缀、密码框、搜索框、文本域。
+description: Arco Input 输入框组件用法与 API。当需要文本输入、密码输入、搜索框、文本域或带前后缀的输入框时使用。
+user-invocable: false
 ---
 
 # Input 输入框

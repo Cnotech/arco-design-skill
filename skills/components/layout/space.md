@@ -1,6 +1,7 @@
 ---
 name: arco-space
-description: 设置组件之间的间距，替代手动设置 margin。
+description: Arco Space 间距组件用法与 API。当需要给组件之间设置统一的水平或垂直间距时使用。
+user-invocable: false
 ---
 
 # Space 间距

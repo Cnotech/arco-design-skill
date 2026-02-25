@@ -1,6 +1,7 @@
 ---
 name: arco-input-number
-description: 数字输入组件，支持步长、精度、范围限制。
+description: Arco InputNumber 数字输入组件用法与 API。当需要数字输入、步进器、精度控制或范围限制时使用。
+user-invocable: false
 ---
 
 # InputNumber 数字输入框

@@ -1,6 +1,7 @@
 ---
 name: arco-menu
-description: 用于页面导航的菜单组件，支持垂直、水平、弹出等模式。
+description: Arco Menu 导航菜单组件用法与 API。当需要创建侧边栏菜单、顶部导航栏、多级菜单或可折叠菜单时使用。
+user-invocable: false
 ---
 
 # Menu 导航菜单

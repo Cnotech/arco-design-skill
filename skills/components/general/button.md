@@ -1,6 +1,7 @@
 ---
 name: arco-button
-description: 用于触发操作的基础交互组件。
+description: Arco Button 按钮组件用法与 API。当需要创建按钮、按钮组、图标按钮或处理按钮加载状态时使用。
+user-invocable: false
 ---
 
 # Button 按钮

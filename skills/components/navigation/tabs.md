@@ -1,6 +1,7 @@
 ---
 name: arco-tabs
-description: Tabs 标签页
+description: Arco Tabs 标签页组件用法与 API。当需要实现标签页切换、卡片式标签或可编辑标签页时使用。
+user-invocable: false
 ---
 
 # Tabs 标签页

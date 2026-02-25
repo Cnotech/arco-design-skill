@@ -1,6 +1,7 @@
 ---
 name: arco-popconfirm
-description: 点击弹出的确认气泡框。
+description: Arco Popconfirm 气泡确认框组件用法与 API。当需要在操作前弹出轻量确认提示时使用。
+user-invocable: false
 ---
 
 # Popconfirm 气泡确认

@@ -1,6 +1,7 @@
 ---
 name: arco-descriptions
-description: Descriptions 描述列表
+description: Arco Descriptions 描述列表组件用法与 API。当需要展示键值对描述信息（如详情页）时使用。
+user-invocable: false
 ---
 
 # Descriptions 描述列表
@@ -32,3 +33,33 @@ import { Descriptions } from '@arco-design/web-react';
 | `border` | `boolean` | — | 边框 |
 | `colon` | `ReactNode` | — | 冒号 |
 | `labelStyle` / `valueStyle` | `CSSProperties` | — | 标签/值样式 |
+
+## 常用模式
+
+```tsx
+// 详情页展示
+<Descriptions title="用户信息" border column={2}>
+  <Descriptions.Item label="姓名">张三</Descriptions.Item>
+  <Descriptions.Item label="手机号">138****0000</Descriptions.Item>
+  <Descriptions.Item label="邮箱">zhangsan@example.com</Descriptions.Item>
+  <Descriptions.Item label="地址" span={2}>北京市朝阳区 xxx 路 xx 号</Descriptions.Item>
+</Descriptions>
+
+// 垂直布局
+<Descriptions layout="vertical" column={3}>
+  <Descriptions.Item label="创建时间">2024-01-01</Descriptions.Item>
+  <Descriptions.Item label="更新时间">2024-06-15</Descriptions.Item>
+  <Descriptions.Item label="状态"><Badge status="success" text="已上线" /></Descriptions.Item>
+</Descriptions>
+
+// 响应式列数
+<Descriptions column={{ xs: 1, sm: 2, md: 3 }} border>
+  ...
+</Descriptions>
+```
+
+## 最佳实践
+
+1. **详情页首选 Descriptions** —— 比手写 div 更规范
+2. **长文本用 span 跨列** —— 地址、备注等可设置 `span={2}` 或 `span={3}`
+3. **配合 border 属性** —— 有边框更易阅读

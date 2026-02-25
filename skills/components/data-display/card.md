@@ -1,6 +1,7 @@
 ---
 name: arco-card
-description: 通用卡片容器。
+description: Arco Card 卡片组件用法与 API。当需要卡片容器、带封面卡片、卡片网格或可操作卡片时使用。
+user-invocable: false
 ---
 
 # Card 卡片

@@ -1,6 +1,7 @@
 ---
 name: arco-form
-description: 高性能表单组件，支持数据收集、校验、提交。
+description: Arco Form 表单组件完整用法与 API。当需要构建表单、表单校验、动态表单（Form.List）、嵌套表单或使用 useForm 实例方法时使用。
+user-invocable: false
 ---
 
 # Form 表单

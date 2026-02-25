@@ -1,6 +1,7 @@
 ---
 name: arco-layout
-description: 页面级别的布局框架，提供 Header、Sider、Content、Footer 四个区域。
+description: Arco Layout 页面布局组件用法与 API。当需要构建 Header/Sider/Content/Footer 页面级布局框架时使用。
+user-invocable: false
 ---
 
 # Layout 布局

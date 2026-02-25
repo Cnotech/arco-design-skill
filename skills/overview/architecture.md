@@ -1,6 +1,7 @@
 ---
 name: arco-architecture
-description: 架构与设计模式
+description: Arco Design 组件架构与设计模式。当需要理解组件目录结构、受控/非受控模式、Props 合并优先级、子组件模式或 Ref 转发等内部机制时使用。
+user-invocable: false
 ---
 
 # 架构与设计模式

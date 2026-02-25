@@ -1,6 +1,7 @@
 ---
 name: arco-icon
-description: Arco Design 图标库，作为独立包 `@arco-design/web-react/icon` 提供。
+description: Arco Icon 图标组件用法。当需要使用内置图标、自定义图标或 IconFont 时使用。
+user-invocable: false
 ---
 
 # Icon 图标

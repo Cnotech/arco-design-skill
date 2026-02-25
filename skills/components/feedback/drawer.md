@@ -1,6 +1,7 @@
 ---
 name: arco-drawer
-description: 侧边滑出的面板，用于详情查看、表单编辑等。
+description: Arco Drawer 抽屉组件用法与 API。当需要侧边滑出面板进行详情查看、表单编辑或多级抽屉时使用。
+user-invocable: false
 ---
 
 # Drawer 抽屉

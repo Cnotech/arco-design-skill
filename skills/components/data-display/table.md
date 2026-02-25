@@ -1,6 +1,7 @@
 ---
 name: arco-table
-description: 功能强大的表格组件，支持排序、筛选、分页、固定列/表头、虚拟滚动、行展开、行选择等。
+description: Arco Table 表格组件完整用法与 API。当需要数据表格、排序、筛选、分页、固定列/表头、虚拟滚动、行选择或行展开时使用。
+user-invocable: false
 ---
 
 # Table 表格

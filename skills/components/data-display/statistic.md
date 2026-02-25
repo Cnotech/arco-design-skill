@@ -1,6 +1,7 @@
 ---
 name: arco-statistic
-description: Statistic 数值显示
+description: Arco Statistic 数值显示组件用法与 API。当需要展示统计数值、倒计时或带趋势的数据时使用。
+user-invocable: false
 ---
 
 # Statistic 数值显示

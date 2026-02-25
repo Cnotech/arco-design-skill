@@ -1,6 +1,7 @@
 ---
 name: arco-config-provider
-description: `ConfigProvider` 用于全局配置所有组件的默认行为，包括主题、尺寸、语言、默认 props 等。
+description: ConfigProvider 全局配置指南。当需要统一设置组件尺寸、主题色、语言、默认 props 或给所有组件注入统一配置时使用。
+user-invocable: false
 ---
 
 # 全局配置 ConfigProvider

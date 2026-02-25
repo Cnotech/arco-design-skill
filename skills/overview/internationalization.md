@@ -1,6 +1,7 @@
 ---
 name: arco-internationalization
-description: Arco Design 内置多语言支持，通过 `ConfigProvider` 的 `locale` 属性切换语言。
+description: Arco Design 国际化（i18n）指南。当需要切换语言、添加多语言支持或自定义 locale 文案时使用。
+user-invocable: false
 ---
 
 # 国际化 i18n

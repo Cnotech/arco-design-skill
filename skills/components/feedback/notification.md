@@ -1,6 +1,7 @@
 ---
 name: arco-notification
-description: 更丰富的全局通知，显示在页面角落。
+description: Arco Notification 通知提醒组件用法与 API。当需要在页面角落展示更丰富的通知内容时使用。
+user-invocable: false
 ---
 
 # Notification 通知提醒

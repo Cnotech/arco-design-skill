@@ -1,6 +1,7 @@
 ---
 name: arco-getting-started
-description: 快速开始
+description: Arco Design 安装与项目初始化指南。当需要安装 @arco-design/web-react、配置按需加载、引入样式或设置 TypeScript 时使用。
+user-invocable: false
 ---
 
 # 快速开始
