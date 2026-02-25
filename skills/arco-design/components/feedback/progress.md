@@ -1,6 +1,6 @@
 ---
 name: arco-progress
-description: Arco Progress 进度条组件用法与 API。当需要展示操作进度、线性进度条或环形进度时使用。
+description: "Arco Design Progress component API. Use for linear progress bars, circular progress, step progress, and custom status display."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-auto-complete
-description: Arco AutoComplete 自动补全组件用法与 API。当需要输入时自动提示候选项或搜索建议时使用。
+description: "Arco Design AutoComplete component API. Use for input autocomplete, search suggestions, and custom dropdown options."
 user-invocable: false
 ---
 

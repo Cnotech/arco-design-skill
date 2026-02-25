@@ -1,6 +1,6 @@
 ---
 name: arco-responsive-design
-description: Arco Design 响应式设计指南。当需要使用 Grid 断点实现响应式布局或自适应页面时使用。
+description: "Arco Design responsive design guide. Use for Grid breakpoints (xs/sm/md/lg/xl/xxl), responsive layout, and adaptive page design."
 user-invocable: false
 ---
 

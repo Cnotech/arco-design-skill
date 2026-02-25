@@ -1,6 +1,6 @@
 ---
 name: arco-anchor
-description: Arco Anchor 锚点组件用法与 API。当需要实现页面内锚点导航、滚动定位或目录导航时使用。
+description: "Arco Design Anchor component API. Use for in-page anchor navigation, scroll-to-section, and table of contents."
 user-invocable: false
 ---
 

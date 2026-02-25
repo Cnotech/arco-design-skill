@@ -1,6 +1,6 @@
 ---
 name: arco-notification
-description: Arco Notification 通知提醒组件用法与 API。当需要在页面角落展示更丰富的通知内容时使用。
+description: "Arco Design Notification component API. Use for rich notification toasts in page corners with title, content, and actions."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-card
-description: Arco Card 卡片组件用法与 API。当需要卡片容器、带封面卡片、卡片网格或可操作卡片时使用。
+description: "Arco Design Card component API. Use for card containers, cover cards, card grids (Card.Grid), card actions, and Card.Meta."
 user-invocable: false
 ---
 

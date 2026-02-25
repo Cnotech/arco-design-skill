@@ -1,6 +1,6 @@
 ---
 name: arco-theming
-description: Arco Design 主题定制指南。当需要自定义主题色、CSS 变量覆盖、Less 变量修改或实现暗色模式切换时使用。
+description: "Arco Design theming and customization guide. Use for custom theme colors, CSS variable overrides, Less variable modification, and dark mode toggle."
 user-invocable: false
 ---
 

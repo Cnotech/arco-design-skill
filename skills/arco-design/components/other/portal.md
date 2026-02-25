@@ -1,6 +1,6 @@
 ---
 name: arco-portal
-description: Arco Portal 传送门组件用法与 API。当需要将子节点渲染到指定 DOM 节点时使用。
+description: "Arco Design Portal component API. Use for rendering children into a different DOM node (React portal)."
 user-invocable: false
 ---
 

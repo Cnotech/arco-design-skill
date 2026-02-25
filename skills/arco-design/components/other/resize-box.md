@@ -1,6 +1,6 @@
 ---
 name: arco-resize-box
-description: Arco ResizeBox 伸缩框组件用法与 API。当需要可拖拽调整大小的容器或分割面板时使用。
+description: "Arco Design ResizeBox component API. Use for resizable containers and split pane layouts."
 user-invocable: false
 ---
 

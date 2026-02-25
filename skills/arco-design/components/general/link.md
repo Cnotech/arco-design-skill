@@ -1,6 +1,6 @@
 ---
 name: arco-link
-description: Arco Link 链接组件用法与 API。当需要创建超链接、带图标链接或不同状态的链接时使用。
+description: "Arco Design Link component API. Use for hyperlinks, icon links, and styled navigation links."
 user-invocable: false
 ---
 

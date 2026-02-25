@@ -1,6 +1,6 @@
 ---
 name: arco-message
-description: Arco Message 全局消息组件用法与 API。当需要在页面顶部显示轻量级的成功、警告、错误等操作反馈时使用。
+description: "Arco Design Message component API. Use for global toast messages — success, error, warning, info, and loading feedback at page top."
 user-invocable: false
 ---
 

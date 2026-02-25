@@ -1,6 +1,6 @@
 ---
 name: arco-input-tag
-description: Arco InputTag 标签输入组件用法与 API。当需要输入并管理标签列表时使用。
+description: "Arco Design InputTag component API. Use for tag input fields, managing tag lists with add/remove, validation, and drag sorting."
 user-invocable: false
 ---
 

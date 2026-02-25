@@ -1,6 +1,6 @@
 ---
 name: arco-slider
-description: Arco Slider 滑动输入条组件用法与 API。当需要范围选择、刻度标记或垂直滑动条时使用。
+description: "Arco Design Slider component API. Use for range sliders, marks/ticks, vertical slider, step control, and tooltip formatting."
 user-invocable: false
 ---
 

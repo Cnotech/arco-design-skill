@@ -1,6 +1,6 @@
 ---
 name: arco-space
-description: Arco Space 间距组件用法与 API。当需要给组件之间设置统一的水平或垂直间距时使用。
+description: "Arco Design Space component API. Use for consistent horizontal/vertical spacing between elements, with wrap and split support."
 user-invocable: false
 ---
 

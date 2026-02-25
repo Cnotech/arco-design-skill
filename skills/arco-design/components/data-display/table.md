@@ -1,6 +1,6 @@
 ---
 name: arco-table
-description: Arco Table 表格组件完整用法与 API。当需要数据表格、排序、筛选、分页、固定列/表头、虚拟滚动、行选择或行展开时使用。
+description: "Arco Design Table component full API. Use for data tables with sorting, filtering, pagination, fixed columns/headers, virtual scroll, row selection, expandable rows, tree data, and custom cell rendering."
 user-invocable: false
 ---
 

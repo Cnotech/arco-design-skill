@@ -1,6 +1,6 @@
 ---
 name: arco-upload
-description: Arco Upload 上传组件用法与 API。当需要文件上传、拖拽上传、图片上传或自定义上传逻辑时使用。
+description: "Arco Design Upload component API. Use for file upload, drag-and-drop upload, image upload with preview, custom upload logic, and upload list management."
 user-invocable: false
 ---
 

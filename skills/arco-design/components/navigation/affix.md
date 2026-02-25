@@ -1,6 +1,6 @@
 ---
 name: arco-affix
-description: Arco Affix 固钉组件用法与 API。当需要将元素固定在页面可视范围的特定位置时使用。
+description: "Arco Design Affix component API. Use for pinning elements to viewport at a fixed position on scroll."
 user-invocable: false
 ---
 

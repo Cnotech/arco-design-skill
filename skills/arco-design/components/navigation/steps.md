@@ -1,6 +1,6 @@
 ---
 name: arco-steps
-description: Arco Steps 步骤条组件用法与 API。当需要展示多步骤流程进度或引导用户完成分步操作时使用。
+description: "Arco Design Steps component API. Use for step-by-step workflows, vertical steps, dot-style steps, and error state indicators."
 user-invocable: false
 ---
 

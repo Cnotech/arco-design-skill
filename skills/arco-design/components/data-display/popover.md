@@ -1,6 +1,6 @@
 ---
 name: arco-popover
-description: Arco Popover 气泡卡片组件用法与 API。当需要点击或悬停弹出气泡式卡片展示更复杂内容时使用。
+description: "Arco Design Popover component API. Use for click/hover popup cards with rich content, titles, and interactive elements."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-alert
-description: Arco Alert 警告提示组件用法与 API。当需要在页面内展示警告、提示、成功或错误等信息条时使用。
+description: "Arco Design Alert component API. Use for inline alert banners — info, success, warning, error messages with optional close button and actions."
 user-invocable: false
 ---
 

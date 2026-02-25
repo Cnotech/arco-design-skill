@@ -1,6 +1,6 @@
 ---
 name: arco-input
-description: Arco Input 输入框组件用法与 API。当需要文本输入、密码输入、搜索框、文本域或带前后缀的输入框时使用。
+description: "Arco Design Input component API. Use for text input, password input (Input.Password), search box (Input.Search), textarea (Input.TextArea), input groups, and prefix/suffix addons."
 user-invocable: false
 ---
 

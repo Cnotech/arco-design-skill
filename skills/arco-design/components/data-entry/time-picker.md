@@ -1,6 +1,6 @@
 ---
 name: arco-time-picker
-description: Arco TimePicker 时间选择组件用法与 API。当需要选择时间、时间范围或自定义时间格式时使用。
+description: "Arco Design TimePicker component API. Use for time selection, time range picker, 12-hour format, step intervals, and disabled hours/minutes."
 user-invocable: false
 ---
 

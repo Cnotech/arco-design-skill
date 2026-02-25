@@ -1,6 +1,6 @@
 ---
 name: arco-date-picker
-description: Arco DatePicker 日期选择组件用法与 API。当需要选择日期、日期范围、周、月、季度、年或自定义日期面板时使用。
+description: "Arco Design DatePicker component API. Use for date selection, date range (DatePicker.RangePicker), week/month/quarter/year picker, disabled dates, and custom panels. Uses dayjs (not moment)."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-grid
-description: Arco Grid 栅格布局组件用法与 API。当需要使用 Row/Col 24 栅格系统进行页面布局、响应式断点适配时使用。
+description: "Arco Design Grid (Row/Col) layout API. Use for 24-column grid system, responsive breakpoints (xs/sm/md/lg/xl/xxl), gutter spacing, and flex alignment."
 user-invocable: false
 ---
 

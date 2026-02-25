@@ -1,6 +1,6 @@
 ---
 name: arco-statistic
-description: Arco Statistic 数值显示组件用法与 API。当需要展示统计数值、倒计时或带趋势的数据时使用。
+description: "Arco Design Statistic component API. Use for numeric statistics display, countdown timers, and trend indicators."
 user-invocable: false
 ---
 

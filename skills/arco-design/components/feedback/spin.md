@@ -1,6 +1,6 @@
 ---
 name: arco-spin
-description: Arco Spin 加载中组件用法与 API。当需要展示全局或局部的加载中状态时使用。
+description: "Arco Design Spin component API. Use for loading spinners wrapping content or standalone loading indicators."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-icon
-description: Arco Icon 图标组件用法。当需要使用内置图标、自定义图标或 IconFont 时使用。
+description: "Arco Design Icon component usage. Use for built-in icons, custom SVG icons, and IconFont integration."
 user-invocable: false
 ---
 

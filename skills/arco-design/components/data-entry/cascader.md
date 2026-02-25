@@ -1,6 +1,6 @@
 ---
 name: arco-cascader
-description: Arco Cascader 级联选择组件用法与 API。当需要多层级数据选择（如省市区、分类层级）、远程加载或搜索时使用。
+description: "Arco Design Cascader component API. Use for multi-level cascading selection (province/city/district), remote loading, search, and change-on-select."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-checkbox
-description: Arco Checkbox 复选框组件用法与 API。当需要多选操作、全选/半选或复选框组时使用。
+description: "Arco Design Checkbox component API. Use for multiple selection, Checkbox.Group, select all / indeterminate state, and controlled checkbox."
 user-invocable: false
 ---
 

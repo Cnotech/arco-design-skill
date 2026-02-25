@@ -1,6 +1,6 @@
 ---
 name: arco-form-patterns
-description: Arco Design 表单常见模式与最佳实践。当需要实现动态表单、联动校验、嵌套表单、异步提交或复杂表单布局时使用。
+description: "Arco Design form patterns and best practices. Use for dynamic forms, field validation, linked validation, nested forms, async form submission, and complex form layouts."
 user-invocable: false
 ---
 

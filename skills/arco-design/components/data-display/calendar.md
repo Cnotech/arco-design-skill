@@ -1,6 +1,6 @@
 ---
 name: arco-calendar
-description: Arco Calendar 日历组件用法与 API。当需要展示日历视图或在日历上标注事件时使用。
+description: "Arco Design Calendar component API. Use for calendar views, event marking on dates, and date panel display."
 user-invocable: false
 ---
 

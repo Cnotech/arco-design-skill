@@ -1,6 +1,6 @@
 ---
 name: arco-radio
-description: Arco Radio 单选框组件用法与 API。当需要单选操作、单选组或按钮式单选时使用。
+description: "Arco Design Radio component API. Use for single selection, Radio.Group, button-style radio, and vertical radio groups."
 user-invocable: false
 ---
 

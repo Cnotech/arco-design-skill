@@ -1,6 +1,6 @@
 ---
 name: arco-tree
-description: Arco Tree 树形控件组件用法与 API。当需要展示层级结构数据、可勾选树、可拖拽排序或虚拟滚动树时使用。
+description: "Arco Design Tree component API. Use for tree structure display, checkable tree, draggable nodes, virtual scroll tree, async loading, and custom tree node rendering."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-back-top
-description: Arco BackTop 回到顶部组件用法与 API。当需要长页面快速回到顶部的按钮时使用。
+description: "Arco Design BackTop component API. Use for scroll-to-top buttons on long pages."
 user-invocable: false
 ---
 

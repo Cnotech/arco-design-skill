@@ -1,6 +1,6 @@
 ---
 name: arco-page-header
-description: Arco PageHeader 页头组件用法与 API。当需要展示页面标题、返回按钮、面包屑和操作区域时使用。
+description: "Arco Design PageHeader component API. Use for page titles with back button, breadcrumb, subtitle, and action buttons."
 user-invocable: false
 ---
 

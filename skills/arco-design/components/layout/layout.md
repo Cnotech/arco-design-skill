@@ -1,6 +1,6 @@
 ---
 name: arco-layout
-description: Arco Layout 页面布局组件用法与 API。当需要构建 Header/Sider/Content/Footer 页面级布局框架时使用。
+description: "Arco Design Layout component API. Use for page-level layout with Header, Sider, Content, Footer, and collapsible sidebar."
 user-invocable: false
 ---
 

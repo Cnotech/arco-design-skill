@@ -1,6 +1,6 @@
 ---
 name: arco-hooks
-description: Arco Design 公共 Hooks 参考。当需要使用验证码组件 useVerificationCode 用法和水印组件 useWatermark 用法时使用。
+description: "Arco Design React hooks reference. Covers useVerificationCode for OTP input control and useWatermark for dynamic watermark management."
 user-invocable: false
 ---
 

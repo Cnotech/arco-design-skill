@@ -1,6 +1,6 @@
 ---
 name: arco-button
-description: Arco Button 按钮组件用法与 API。当需要创建按钮、按钮组、图标按钮或处理按钮加载状态时使用。
+description: "Arco Design Button component API and usage. Use for buttons, button groups, icon buttons, loading buttons, and link-style buttons in React."
 user-invocable: false
 ---
 

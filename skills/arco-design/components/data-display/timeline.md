@@ -1,6 +1,6 @@
 ---
 name: arco-timeline
-description: Arco Timeline 时间线组件用法与 API。当需要展示时间轴、流程步骤或变更记录时使用。
+description: "Arco Design Timeline component API. Use for timelines, activity feeds, changelog display, and step progress."
 user-invocable: false
 ---
 

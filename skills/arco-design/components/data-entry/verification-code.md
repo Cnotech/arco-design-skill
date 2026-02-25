@@ -1,6 +1,6 @@
 ---
 name: arco-verification-code
-description: Arco VerificationCode 验证码输入组件用法与 API。当需要实现验证码输入框时使用。
+description: "Arco Design VerificationCode component API. Use for OTP / verification code input fields with configurable length."
 user-invocable: false
 ---
 

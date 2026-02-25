@@ -1,6 +1,6 @@
 ---
 name: arco-tag
-description: Arco Tag 标签组件用法与 API。当需要展示状态标签、可关闭标签或可选中标签时使用。
+description: "Arco Design Tag component API. Use for status tags, closable tags, checkable tags (Tag.CheckableTag), colored tags, and dynamic tag lists."
 user-invocable: false
 ---
 

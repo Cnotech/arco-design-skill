@@ -1,6 +1,6 @@
 ---
 name: arco-color-picker
-description: Arco ColorPicker 颜色选择器组件用法与 API。当需要选择颜色值时使用。
+description: "Arco Design ColorPicker component API. Use for color selection with hex/rgb/hsl support."
 user-invocable: false
 ---
 

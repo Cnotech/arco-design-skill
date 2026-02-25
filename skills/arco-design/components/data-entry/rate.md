@@ -1,6 +1,6 @@
 ---
 name: arco-rate
-description: Arco Rate 评分组件用法与 API。当需要星级评分、半选评分或自定义评分字符时使用。
+description: "Arco Design Rate component API. Use for star rating, half-star rating, readonly display, and custom rating characters."
 user-invocable: false
 ---
 

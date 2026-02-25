@@ -1,6 +1,6 @@
 ---
 name: arco-architecture
-description: Arco Design 组件架构与设计模式。当需要理解组件目录结构、受控/非受控模式、Props 合并优先级、子组件模式或 Ref 转发等内部机制时使用。
+description: "Arco Design component architecture and design patterns. Use for understanding component structure, controlled/uncontrolled patterns, props merging, sub-component patterns (Component.SubComponent), and ref forwarding."
 user-invocable: false
 ---
 

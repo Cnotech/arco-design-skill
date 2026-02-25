@@ -1,6 +1,6 @@
 ---
 name: arco-form
-description: Arco Form 表单组件完整用法与 API。当需要构建表单、表单校验、动态表单（Form.List）、嵌套表单或使用 useForm 实例方法时使用。
+description: "Arco Design Form component full API. Use for form building, validation rules, Form.Item fields, Form.List dynamic fields, useForm hook, nested forms, async submission, and custom validators.
 user-invocable: false
 ---
 

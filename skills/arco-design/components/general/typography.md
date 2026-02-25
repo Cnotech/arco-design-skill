@@ -1,6 +1,6 @@
 ---
 name: arco-typography
-description: Arco Typography 排版组件用法与 API。当需要展示标题、段落、文本，或实现文本省略、可复制、可编辑功能时使用。
+description: "Arco Design Typography component API. Use for headings, paragraphs, text display, ellipsis truncation, copyable text, and editable text."
 user-invocable: false
 ---
 

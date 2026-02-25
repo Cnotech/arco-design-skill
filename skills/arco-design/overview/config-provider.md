@@ -1,6 +1,6 @@
 ---
 name: arco-config-provider
-description: ConfigProvider 全局配置指南。当需要统一设置组件尺寸、主题色、语言、默认 props 或给所有组件注入统一配置时使用。
+description: "Arco Design ConfigProvider API guide. Use for global component configuration — size, theme, locale, default props, and prefixCls customization."
 user-invocable: false
 ---
 

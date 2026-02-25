@@ -1,6 +1,6 @@
 ---
 name: arco-watermark
-description: Arco Watermark 水印组件用法与 API。当需要给页面或区域添加水印时使用。
+description: "Arco Design Watermark component API. Use for adding text or image watermarks over page content."
 user-invocable: false
 ---
 

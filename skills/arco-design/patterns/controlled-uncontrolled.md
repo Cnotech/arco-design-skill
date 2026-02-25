@@ -1,6 +1,6 @@
 ---
 name: arco-controlled-uncontrolled
-description: Arco Design 受控与非受控模式指南。当需要理解或选择组件的受控（value）和非受控（defaultValue）状态管理方式时使用。
+description: "Arco Design controlled vs uncontrolled component patterns. Use for understanding value/onChange (controlled) vs defaultValue (uncontrolled) state management."
 user-invocable: false
 ---
 

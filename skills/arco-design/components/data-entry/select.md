@@ -1,6 +1,6 @@
 ---
 name: arco-select
-description: Arco Select 选择器组件用法与 API。当需要下拉选择、多选、搜索选择、远程搜索、分组选项或虚拟滚动长列表时使用。
+description: "Arco Design Select component API. Use for dropdown select, multi-select, searchable select, remote search, option groups, Select.Option, and virtual scroll for large lists."
 user-invocable: false
 ---
 

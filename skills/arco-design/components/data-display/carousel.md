@@ -1,6 +1,6 @@
 ---
 name: arco-carousel
-description: Arco Carousel 走马灯组件用法与 API。当需要创建轮播图、图片走马灯或卡片轮播时使用。
+description: "Arco Design Carousel component API. Use for image carousels, slideshows, and card carousel displays."
 user-invocable: false
 ---
 

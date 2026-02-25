@@ -1,6 +1,6 @@
 ---
 name: arco-descriptions
-description: Arco Descriptions 描述列表组件用法与 API。当需要展示键值对描述信息（如详情页）时使用。
+description: "Arco Design Descriptions component API. Use for key-value detail display (detail pages), vertical/horizontal layout, bordered descriptions, and responsive columns."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-collapse
-description: Arco Collapse 折叠面板组件用法与 API。当需要折叠/展开内容区域或实现手风琴效果时使用。
+description: "Arco Design Collapse component API. Use for collapsible panels, accordion (single expand), FAQ sections, and nested collapsible content."
 user-invocable: false
 ---
 

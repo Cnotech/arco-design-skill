@@ -1,6 +1,6 @@
 ---
 name: arco-internationalization
-description: Arco Design 国际化（i18n）指南。当需要切换语言、添加多语言支持或自定义 locale 文案时使用。
+description: "Arco Design internationalization (i18n) guide. Use for switching languages, adding locale packs, and customizing locale text."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-result
-description: Arco Result 结果页组件用法与 API。当需要展示操作结果（成功、失败、404 等）的反馈页面时使用。
+description: "Arco Design Result component API. Use for result pages showing success, failure, 403, 404, 500 status with actions."
 user-invocable: false
 ---
 

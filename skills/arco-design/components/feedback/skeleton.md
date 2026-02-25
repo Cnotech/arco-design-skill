@@ -1,6 +1,6 @@
 ---
 name: arco-skeleton
-description: Arco Skeleton 骨架屏组件用法与 API。当需要在数据加载期间展示占位骨架动画时使用。
+description: "Arco Design Skeleton component API. Use for loading skeleton placeholders with text rows, image blocks, and animation."
 user-invocable: false
 ---
 

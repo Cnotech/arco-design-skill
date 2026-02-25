@@ -1,6 +1,6 @@
 ---
 name: arco-tooltip
-description: Arco Tooltip 文字提示组件用法与 API。当需要鼠标悬停时显示简单的文字提示信息时使用。
+description: "Arco Design Tooltip component API. Use for hover text hints, mini tooltips, and positioned tooltip popups. For complex content use Popover instead."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-modal-patterns
-description: Arco Design 弹层相关组件使用模式。当需要实现表单弹窗、确认流程、嵌套抽屉或全局消息通知等模式时使用。
+description: "Arco Design modal/dialog patterns. Use for form-in-modal, confirmation flows, nested drawers, and global message/notification patterns."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-image
-description: Arco Image 图片组件用法与 API。当需要图片展示、预览、懒加载或图片组预览时使用。
+description: "Arco Design Image component API. Use for image display, preview, lazy loading, Image.PreviewGroup for galleries, and error fallback."
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: arco-breadcrumb
-description: Arco Breadcrumb 面包屑组件用法与 API。当需要展示页面导航层级路径时使用。
+description: "Arco Design Breadcrumb component API. Use for page navigation hierarchy, route-based breadcrumbs, and dropdown breadcrumbs."
 user-invocable: false
 ---
 

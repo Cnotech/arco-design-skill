@@ -1,6 +1,6 @@
 ---
 name: arco-divider
-description: Arco Divider 分割线组件用法与 API。当需要在内容之间添加水平或垂直分隔线时使用。
+description: "Arco Design Divider component API. Use for horizontal/vertical dividers and section separators with optional text."
 user-invocable: false
 ---
 

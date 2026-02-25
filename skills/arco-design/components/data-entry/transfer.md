@@ -1,6 +1,6 @@
 ---
 name: arco-transfer
-description: Arco Transfer 穿梭框组件用法与 API。当需要在两个列表之间转移数据项时使用。
+description: "Arco Design Transfer component API. Use for transferring items between two lists, searchable transfer, simple mode, and custom rendering."
 user-invocable: false
 ---
 

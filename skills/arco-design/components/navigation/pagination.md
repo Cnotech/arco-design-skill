@@ -1,6 +1,6 @@
 ---
 name: arco-pagination
-description: Arco Pagination 分页组件用法与 API。当需要单独使用分页器或自定义分页样式时使用。
+description: "Arco Design Pagination component API. Use for page navigation, page size switching, simple/mini pagination, and custom total display."
 user-invocable: false
 ---
 

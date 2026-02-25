@@ -1,6 +1,6 @@
 ---
 name: arco-badge
-description: Arco Badge 徽标组件用法与 API。当需要在元素上显示数字或状态小红点时使用。
+description: "Arco Design Badge component API. Use for numeric badges, status dots, and count indicators on elements."
 user-invocable: false
 ---
 

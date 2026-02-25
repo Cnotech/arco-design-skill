@@ -1,6 +1,6 @@
 ---
 name: arco-getting-started
-description: Arco Design 安装与项目初始化指南。当需要安装 @arco-design/web-react、配置按需加载、引入样式或设置 TypeScript 时使用。
+description: "Arco Design installation and setup guide. Use for installing @arco-design/web-react, importing styles, configuring on-demand loading (babel-plugin-import or tree-shaking), and TypeScript setup."
 user-invocable: false
 ---
 

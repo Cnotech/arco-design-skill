@@ -1,6 +1,6 @@
 ---
 name: arco-input-number
-description: Arco InputNumber 数字输入组件用法与 API。当需要数字输入、步进器、精度控制或范围限制时使用。
+description: "Arco Design InputNumber component API. Use for numeric input, stepper, precision control, min/max range, and formatter."
 user-invocable: false
 ---
 

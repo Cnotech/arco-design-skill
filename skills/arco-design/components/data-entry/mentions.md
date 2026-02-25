@@ -1,6 +1,6 @@
 ---
 name: arco-mentions
-description: Arco Mentions 提及组件用法与 API。当需要在输入框中 @ 提及用户或话题时使用。
+description: "Arco Design Mentions component API. Use for @mention users or topics in text input."
 user-invocable: false
 ---
 

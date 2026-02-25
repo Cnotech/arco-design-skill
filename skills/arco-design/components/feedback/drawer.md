@@ -1,6 +1,6 @@
 ---
 name: arco-drawer
-description: Arco Drawer 抽屉组件用法与 API。当需要侧边滑出面板进行详情查看、表单编辑或多级抽屉时使用。
+description: "Arco Design Drawer component API. Use for slide-out side panels, detail views, form editing in drawers, and nested drawers."
 user-invocable: false
 ---
 

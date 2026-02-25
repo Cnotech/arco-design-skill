@@ -1,6 +1,6 @@
 ---
 name: arco-table-patterns
-description: Arco Design 表格常见模式与最佳实践。当需要实现远程数据加载、可编辑表格、虚拟滚动大数据表或自定义筛选时使用。
+description: "Arco Design table patterns and best practices. Use for remote data loading, editable table rows, virtual scroll for large datasets, custom filters, and row selection."
 user-invocable: false
 ---
 

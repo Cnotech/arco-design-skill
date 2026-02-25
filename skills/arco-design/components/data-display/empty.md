@@ -1,6 +1,6 @@
 ---
 name: arco-empty
-description: Arco Empty 空状态组件用法与 API。当数据为空时需要展示占位图和提示文字时使用。
+description: "Arco Design Empty component API. Use for empty state placeholders when no data is available."
 user-invocable: false
 ---
 

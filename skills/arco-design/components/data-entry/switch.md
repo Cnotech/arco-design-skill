@@ -1,6 +1,6 @@
 ---
 name: arco-switch
-description: Arco Switch 开关组件用法与 API。当需要切换开关状态、带文字或图标的开关时使用。
+description: "Arco Design Switch component API. Use for toggle switches, loading state, checked/unchecked text, and async toggle. In Form use triggerPropName='checked'."
 user-invocable: false
 ---
 

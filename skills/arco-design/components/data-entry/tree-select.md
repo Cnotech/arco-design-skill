@@ -1,6 +1,6 @@
 ---
 name: arco-tree-select
-description: Arco TreeSelect 树选择组件用法与 API。当需要从树形结构中选择数据、支持搜索或多选时使用。
+description: "Arco Design TreeSelect component API. Use for selecting from tree structure data, tree checkboxes, searchable tree, and async node loading."
 user-invocable: false
 ---
 

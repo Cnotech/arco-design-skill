@@ -1,6 +1,6 @@
 ---
 name: arco-comment
-description: Arco Comment 评论组件用法与 API。当需要展示评论内容、嵌套回复或评论列表时使用。
+description: "Arco Design Comment component API. Use for comment display, nested replies, comment lists with actions (like, reply)."
 user-invocable: false
 ---
 

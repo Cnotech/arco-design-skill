@@ -1,6 +1,6 @@
 ---
 name: arco-modal
-description: Arco Modal 对话框组件用法与 API。当需要模态弹窗、确认对话框（Modal.confirm）、信息提示或 useModal Hook 时使用。
+description: "Arco Design Modal component API. Use for modal dialogs, Modal.confirm() confirmation, Modal.info/success/warning/error, useModal hook, and form-in-modal patterns. Use unmountOnExit to reset form state."
 user-invocable: false
 ---
 
