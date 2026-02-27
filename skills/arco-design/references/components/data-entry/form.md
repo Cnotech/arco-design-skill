@@ -1,6 +1,6 @@
 ---
 name: arco-form
-description: "Arco Design Form component full API. Use for form building, validation rules, Form.Item fields, Form.List dynamic fields, useForm hook, nested forms, async submission, and custom validators.
+description: Arco Design Form component full API. Use for form building, validation rules, Form.Item fields, Form.List dynamic fields, useForm hook, nested forms, async submission, and custom validators.
 user-invocable: false
 ---
 
