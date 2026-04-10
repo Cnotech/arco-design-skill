@@ -1,17 +1,15 @@
 **English** | [中文](README-CN.md)
 
-# Arco Design React — AI Skills
+# Arco Design — AI Skills
 
-> A complete skill set for `@arco-design/web-react`, enabling AI agents to accurately use Arco Design when building React applications.
+> Complete skill sets for `@arco-design/web-react` and `@arco-design/web-vue`, enabling AI agents to accurately use Arco Design when building React or Vue applications.
 
 ## What is this?
 
-A collection of **skill files** covering the [Arco Design](https://arco.design) React component library:
+A collection of **skill files** covering the [Arco Design](https://arco.design) React and Vue component libraries:
 
-- **70 components** — API reference, code examples, and best practices for every component
-- **5 overview guides** — Installation, global config, theming, i18n, architecture patterns
-- **5 pattern guides** — Forms, tables, modals, controlled/uncontrolled, responsive design
-- **2 hooks references** — useVerificationCode, useWatermark
+- **React skill** for `@arco-design/web-react` — 70 components, 5 overview guides, 5 pattern guides, and 2 hooks references
+- **Vue skill** for `@arco-design/web-vue` — 74 components, 5 overview guides, and 5 pattern guides
 
 When writing code with Arco Design, AI agents automatically load the relevant skill to get accurate API info and best practices.
 
@@ -47,6 +45,8 @@ skills/
             └── use-watermark.md           #   useWatermark hook
 ```
 
+The Vue skill lives in `skills/arco-design-vue/` and follows the same entry/reference structure for `@arco-design/web-vue`.
+
 ## Skill File Structure
 
 Each component skill file follows a consistent format:
@@ -59,7 +59,10 @@ Each component skill file follows a consistent format:
 
 ## Entry Point
 
-[skills/arco-design/SKILL.md](skills/arco-design/SKILL.md) is the main entry skill, automatically loaded by agents. It contains:
+[skills/arco-design/SKILL.md](skills/arco-design/SKILL.md) is the React entry skill for `@arco-design/web-react`.
+[skills/arco-design-vue/SKILL.md](skills/arco-design-vue/SKILL.md) is the Vue entry skill for `@arco-design/web-vue`.
+
+Each entry skill contains:
 
 - **Critical conventions** — Import patterns, controlled mode, sub-component access, Arco-specific differences from Ant Design
 - **Component index** — Categorized tables with "Use for" descriptions for every component
