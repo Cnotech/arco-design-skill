@@ -6,23 +6,11 @@ user-invocable: false
 
 # 全局配置 ConfigProvider
 
-来源组件：上游 `web-vue/components/config-provider`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-config-provider>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本用法
-
-### 说明
 设置国际化语言的基本用法。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -100,157 +88,7 @@ export default {
 </script>
 ```
 
-## 示例：自定义空状态元素
-
-### 说明
-通过 `empty` 插槽可以全局自定义空状态元素。
-
-
-
-
-```vue
-<template>
-  <a-config-provider>
-    <template #empty="scope">
-      <a-empty v-if="scope?.component==='cascader'" description="cascader no data!" in-config-provider>
-      </a-empty>
-      <a-empty v-else-if="scope?.component==='select'" description="select no data!" in-config-provider></a-empty>
-      <a-empty v-else-if="scope?.component==='tree-select'" description="tree-select no data!" in-config-provider></a-empty>
-      <a-empty v-else-if="scope?.component==='list'" description="list no data!" in-config-provider></a-empty>
-      <a-empty v-else-if="scope?.component==='table'" description="table no data!" in-config-provider></a-empty>
-      <div v-else class="my-empty">
-        <icon-trophy />
-      </div>
-    </template>
-    <a-space direction="vertical" fill>
-      <a-cascader :options="[]" placeholder="cascader" allow-search />
-      <a-select placeholder="select" allow-search />
-      <a-tree-select placeholder="tree-select"/>
-      <a-list>
-        <template #header>
-          Empty List
-        </template>
-      </a-list>
-      <a-table :columns="columns" :data="[]" />
-      <a-empty></a-empty>
-    </a-space>
-  </a-config-provider>
-</template>
-
-<script>
-import { IconTrophy } from '@arco-design/web-vue/es/icon';
-
-export default {
-  components: {
-    IconTrophy
-  },
-  setup() {
-    const columns = [
-      {
-        title: 'Name',
-        dataIndex: 'name',
-      },
-      {
-        title: 'Salary',
-        dataIndex: 'salary',
-      },
-      {
-        title: 'Address',
-        dataIndex: 'address',
-      },
-      {
-        title: 'Email',
-        dataIndex: 'email',
-      },
-    ];
-    return {
-      columns
-    }
-  }
-}
-</script>
-
-<style>
-.my-empty {
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-}
-</style>
-```
-
-## 示例：RTL 视图
-
-### 说明
-设置组件为从右向左阅读的视图。
-
-
-
-
-```vue
-<template>
-  <div>
-    <a-switch v-model="rtlType" style="margin-bottom: 20px;">
-      <template #checked>
-        RTL
-      </template>
-      <template #unchecked>
-        LTR
-      </template>
-    </a-switch>
-    <a-config-provider :rtl="rtlType">
-      <a-tabs :default-active-key="2" style="margin-bottom: 20px;">
-        <a-tab-pane
-          v-for="i in 36"
-          :key="i"
-          :title="`Tab ${i}`"
-        >
-          Content of Tab Panel {{ i }}
-        </a-tab-pane>
-      </a-tabs>
-      <a-space :direction="'vertical'" style="width: 100%;">
-        <a-space :size="40">
-          <a-badge :count="9">
-            <a-avatar shape="square" />
-          </a-badge>
-          <a-badge :count="9" dot :dotStyle="{ width: '10px', height: '10px' }">
-            <a-avatar shape="square" />
-          </a-badge>
-          <a-badge :dotStyle="{ height: '16px', width: '16px', fontSize: '14px' }">
-            <template #content>
-              <IconClockCircle
-                :style="{ verticalAlign: 'middle', color: 'var(--color-text-2)' }"
-              />
-            </template>
-            <a-avatar shape="square" />
-          </a-badge>
-          <a-tag :color="'red'" closable>red</a-tag>
-          <a-tag :color="'blue'" closable>blue</a-tag>
-          <a-tag :color="'green'" closable>green</a-tag>
-        </a-space>
-      </a-space>
-    </a-config-provider>
-  </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const rtlType = ref(true);
-
-    return {
-      rtlType,
-    };
-  },
-};
-</script>
-```
-
 ## API
-
 
 ### `<config-provider>` 属性
 
@@ -264,6 +102,7 @@ export default {
 |scroll-to-close|是否在滚动时关闭弹出框|`boolean`|`false`|2.46.0|
 |exchange-time|是否交换时间|`boolean`|`true`|2.48.0|
 |rtl|视图的表现形式是从右开始向左结束|`boolean`|`false`||
+
 ### `<config-provider>` 插槽
 
 |插槽名|描述|参数|版本|
@@ -271,15 +110,15 @@ export default {
 |loading|自定义加载中元素|-|2.28.0|
 |empty|自定义空状态元素|component: `string`|2.28.0|
 
+## 常用模式
 
+- **自定义空状态元素**：通过 `empty` 插槽可以全局自定义空状态元素。
+- **RTL 视图**：设置组件为从右向左阅读的视图。
 
+## 最佳实践
 
-## FAQ
-
-### 全局配置
-
-`global` 属性设置为 `true` 时，会将配置内容注入到 Vue AppContext 中，一般用于解决使用 Modal、Message 组件的函数式调用方法时，配置内容无法生效的问题。
-
-### 自定义空状态展示
-
-可以在 `#empty` 中自定义组件库全局的空状态展示，如果在插槽中使用到了 `Empty` 组件，需要开启 `inConfigProvider` 属性。
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 基础组件保持语义清晰，主操作、次操作和危险操作要用不同 `type` 或 `status` 区分。
+- 图标、按钮、链接等交互元素要同时考虑禁用、加载和可访问文本。

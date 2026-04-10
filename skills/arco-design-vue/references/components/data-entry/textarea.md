@@ -6,23 +6,11 @@ user-invocable: false
 
 # 文本域 Textarea
 
-来源组件：上游 `web-vue/components/textarea`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-textarea>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本使用
-
-### 说明
 可以用于多行输入。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -30,61 +18,7 @@ user-invocable: false
 </template>
 ```
 
-## 示例：文本域状态
-
-### 说明
-文本域可以设置禁用和错误状态。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large" style="width: 100%">
-    <a-textarea placeholder="Disabled status" disabled/>
-    <a-textarea placeholder="Error status" error/>
-  </a-space>
-</template>
-```
-
-## 示例：字数统计
-
-### 说明
-设置 `max-length` 可以限制最大字数，配合 `show-word-limit` 可以显示字数统计。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large" fill>
-    <a-textarea placeholder="Please enter something" :max-length="10" allow-clear show-word-limit />
-    <a-textarea placeholder="Please enter something" :max-length="{length:10,errorOnly:true}" allow-clear
-                show-word-limit />
-  </a-space>
-</template>
-```
-
-## 示例：自适应高度
-
-### 说明
-通过设置 `auto-size`，可以让文本框自适应输入内容。
-
-
-
-
-```vue
-<template>
-  <a-textarea default-value="This is the contents of the textarea. This is the contents of the textarea. This is the contents of the textarea." auto-size />
-  <a-textarea default-value="This is the contents of the textarea. This is the contents of the textarea. This is the contents of the textarea." :auto-size="{
-    minRows:2,
-    maxRows:5
-  }" style="margin-top: 20px"/>
-</template>
-```
-
 ## API
-
 
 ### `<textarea>` 属性
 
@@ -102,6 +36,7 @@ user-invocable: false
 |word-length|字符长度的计算方法|`(value: string) => number`|`-`||
 |word-slice|字符截取方法，同 wordLength 一起使用|`(value: string, maxLength: number) => string`|`-`|2.12.0|
 |textarea-attrs|透传给 textarea 的属性|`Record<string, any>`|`-`||
+
 ### `<textarea>` 事件
 
 |事件名|描述|参数|
@@ -111,9 +46,25 @@ user-invocable: false
 |clear|点击清除按钮时触发|ev: `MouseEvent`|
 |focus|文本框获取焦点时触发|ev: `FocusEvent`|
 |blur|文本框失去焦点时触发|ev: `FocusEvent`|
+
 ### `<textarea>` 方法
 
 |方法名|描述|参数|返回值|版本|
 |---|---|---|---|:---|
 |focus|使输入框获取焦点|-|-|2.24.0|
 |blur|使输入框失去焦点|-|-|2.24.0|
+
+## 常用模式
+
+- **基本使用**：可以用于多行输入。
+- **文本域状态**：文本域可以设置禁用和错误状态。
+- **字数统计**：设置 `max-length` 可以限制最大字数，配合 `show-word-limit` 可以显示字数统计。
+- **自适应高度**：通过设置 `auto-size`，可以让文本框自适应输入内容。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 需要进入表单校验或提交流程的控件，优先放在 `a-form-item` 中并绑定明确的 `field`。
+- 输入值优先使用 `v-model`；范围、弹窗类状态使用组件文档中的命名 `v-model:*`。

@@ -6,23 +6,11 @@ user-invocable: false
 
 # 分割线 Divider
 
-来源组件：上游 `web-vue/components/divider`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-divider>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本用法
-
-### 说明
 对不同章节的文本段落进行分割，默认为水平分割线，可在中间加入文字。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -117,68 +105,7 @@ export default {
 </style>
 ```
 
-## 示例：带有文字的分割线
-
-### 说明
-通过 `orientation` 为分割线添加描述文字。
-
-
-
-
-```vue
-<template>
-  <div class="divider-demo">
-    <p>A design is a plan or specification for the construction of an object.</p>
-    <a-divider orientation="left">Text</a-divider>
-    <p>A design is a plan or specification for the construction of an object.</p>
-    <a-divider orientation="center">Text</a-divider>
-    <p>A design is a plan or specification for the construction of an object.</p>
-    <a-divider orientation="right">Text</a-divider>
-    <a-divider :margin="10"><icon-star /></a-divider>
-  </div>
-</template>
-
-<style scoped>
-.divider-demo {
-  box-sizing: border-box;
-  width: 560px;
-  padding: 24px;
-  border: 30px solid rgb(var(--gray-2));
-}
-</style>
-```
-
-## 示例：竖直分割线
-
-### 说明
-指定 `direction` 为 `vertical` 即可使用竖直分割线。竖直分割线不能带文字。
-
-
-
-
-```vue
-<template>
-  <div class="divider-demo">
-    <span>Item 1</span>
-    <a-divider direction="vertical" />
-    <span>Item 2</span>
-    <a-divider direction="vertical" />
-    <span>Item 3</span>
-  </div>
-</template>
-
-<style scoped>
-.divider-demo {
-  box-sizing: border-box;
-  width: 560px;
-  padding: 24px;
-  border: 30px solid rgb(var(--gray-2));
-}
-</style>
-```
-
 ## API
-
 
 ### `<divider>` 属性
 
@@ -189,3 +116,16 @@ export default {
 |type|分割线样式类型|`'solid' \| 'dashed' \| 'dotted' \| 'double'`|`-`|2.35.0|
 |size|分割线宽度/高度|`number`|`-`|2.35.0|
 |margin|分割线上下 margin (垂直方向时为左右 margin)|`number \| string`|`-`|2.35.0|
+
+## 常用模式
+
+- **带有文字的分割线**：通过 `orientation` 为分割线添加描述文字。
+- **竖直分割线**：指定 `direction` 为 `vertical` 即可使用竖直分割线。竖直分割线不能带文字。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 布局组件只处理结构和间距，不在其中承载业务状态。
+- 响应式页面优先组合 `a-grid`、`a-row`、`a-col` 和 `a-space`。

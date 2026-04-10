@@ -6,23 +6,11 @@ user-invocable: false
 
 # 标签页 Tabs
 
-来源组件：上游 `web-vue/components/tabs`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-tabs>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本用法
-
-### 说明
 标签页的基本使用方法。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -41,373 +29,7 @@ user-invocable: false
 </template>
 ```
 
-## 示例：带图标的页签
-
-### 说明
-带有图标的标签页。
-
-
-
-
-```vue
-<template>
-  <a-tabs>
-    <a-tab-pane key="1">
-      <template #title>
-        <icon-calendar/> Tab 1
-      </template>
-      Content of Tab Panel 1
-    </a-tab-pane>
-    <a-tab-pane key="2">
-      <template #title>
-        <icon-clock-circle/> Tab 2
-      </template>
-      Content of Tab Panel 2
-    </a-tab-pane>
-    <a-tab-pane key="3">
-      <template #title>
-        <icon-user/> Tab 3
-      </template>
-      Content of Tab Panel 3
-    </a-tab-pane>
-  </a-tabs>
-</template>
-```
-
-## 示例：位置
-
-### 说明
-通过 `position` 属性可以自定义标签栏的位置。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large">
-    <a-radio-group v-model="position" type="button">
-      <a-radio value="top">Top</a-radio>
-      <a-radio value="right">Right</a-radio>
-      <a-radio value="bottom">Bottom</a-radio>
-      <a-radio value="left">Left</a-radio>
-    </a-radio-group>
-    <a-tabs :position="position">
-      <a-tab-pane key="1" title="Tab 1">
-        Content of Tab Panel 1
-      </a-tab-pane>
-      <a-tab-pane key="2" title="Tab 2">
-        Content of Tab Panel 2
-      </a-tab-pane>
-      <a-tab-pane key="3" title="Tab 3">
-        Content of Tab Panel 3
-      </a-tab-pane>
-    </a-tabs>
-  </a-space>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const position = ref('top');
-
-    return {
-      position
-    }
-  },
-}
-</script>
-```
-
-## 示例：不同类型
-
-### 说明
-通过 `type` 可以设置标签的类型。
-
-
-
-
-```vue
-
-<template>
-  <a-space direction="vertical" size="large">
-    <a-radio-group v-model="type" type="button">
-      <a-radio value="line">Line</a-radio>
-      <a-radio value="card">Card</a-radio>
-      <a-radio value="card-gutter">Card Gutter</a-radio>
-      <a-radio value="text">Text</a-radio>
-      <a-radio value="rounded">Rounded</a-radio>
-      <a-radio value="capsule">Capsule</a-radio>
-    </a-radio-group>
-    <a-radio-group v-model="size" type="button">
-      <a-radio value="mini">Mini</a-radio>
-      <a-radio value="small">Small</a-radio>
-      <a-radio value="medium">Medium</a-radio>
-      <a-radio value="large">Large</a-radio>
-    </a-radio-group>
-    <a-tabs :type="type" :size="size">
-      <a-tab-pane key="1" title="Tab 1">
-        Content of Tab Panel 1
-      </a-tab-pane>
-      <a-tab-pane key="2" title="Tab 2">
-        Content of Tab Panel 2
-      </a-tab-pane>
-      <a-tab-pane key="3" title="Tab 3">
-        Content of Tab Panel 3
-      </a-tab-pane>
-    </a-tabs>
-  </a-space>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const type = ref('line');
-    const size = ref('medium');
-
-    return {
-      type,
-      size
-    }
-  },
-}
-</script>
-```
-
-## 示例：懒加载
-
-### 说明
-通过设置 lazy-load 属性，可以让面板在首次激活时渲染。
-
-
-
-
-```vue
-<template>
-  <a-tabs default-active-key="2" lazy-load>
-    <a-tab-pane key="1" title="Tab 1">
-      Content of Tab Panel 1
-    </a-tab-pane>
-    <a-tab-pane key="2" title="Tab 2">
-      Content of Tab Panel 2
-    </a-tab-pane>
-    <a-tab-pane key="3" title="Tab 3">
-      Content of Tab Panel 3
-    </a-tab-pane>
-  </a-tabs>
-</template>
-```
-
-## 示例：附加内容
-
-### 说明
-通过 `extra` 插槽可以自定义额外显示内容。
-
-
-
-
-```vue
-<template>
-  <a-tabs>
-    <template #extra>
-      <a-button>Action</a-button>
-    </template>
-    <a-tab-pane key="1" title="Tab 1">
-      Content of Tab Panel 1
-    </a-tab-pane>
-    <a-tab-pane key="2" title="Tab 2">
-      Content of Tab Panel 2
-    </a-tab-pane>
-    <a-tab-pane key="3" title="Tab 3">
-      Content of Tab Panel 3
-    </a-tab-pane>
-  </a-tabs>
-</template>
-```
-
-## 示例：动态增减标签页
-
-### 说明
-通过设置 `:editable="true"` 可以开启动态增减标签页。仅在 `line` | `card` | `card-gutter` 生效
-
-
-
-
-```vue
-
-<template>
-  <a-tabs type="card-gutter" :editable="true" @add="handleAdd" @delete="handleDelete" show-add-button auto-switch>
-    <a-tab-pane v-for="(item, index) of data" :key="item.key" :title="item.title" :closable="index!==2">
-      {{ item?.content }}
-    </a-tab-pane>
-  </a-tabs>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-let count = 5;
-
-export default {
-  setup() {
-    const data = ref([
-      {
-        key: '1',
-        title: 'Tab 1',
-        content: 'Content of Tab Panel 1'
-      },
-      {
-        key: '2',
-        title: 'Tab 2',
-        content: 'Content of Tab Panel 2'
-      },
-      {
-        key: '3',
-        title: 'Tab 3',
-        content: 'Content of Tab Panel 3'
-      },
-      {
-        key: '4',
-        title: 'Tab 4',
-        content: 'Content of Tab Panel 4'
-      }
-    ]);
-
-    const handleAdd = () => {
-      const number = count++;
-      data.value = data.value.concat({
-        key: `${number}`,
-        title: `New Tab ${number}`,
-        content: `Content of New Tab Panel ${number}`
-      })
-    };
-    const handleDelete = (key) => {
-      data.value = data.value.filter(item => item.key !== key)
-    };
-
-    return {
-      data,
-      handleAdd,
-      handleDelete
-    }
-  },
-}
-</script>
-```
-
-## 示例：触发方式
-
-### 说明
-通过 `trigger` 指定触发方式。
-
-
-
-
-```vue
-<template>
-  <a-radio-group v-model="trigger">
-    <a-radio value="click">click</a-radio>
-    <a-radio value="hover">hover</a-radio>
-  </a-radio-group>
-  <a-tabs default-active-key="1" :trigger="trigger">
-    <a-tab-pane key="1" title="Tab 1"> Content of Tab Panel 1 </a-tab-pane>
-    <a-tab-pane key="2" title="Tab 2"> Content of Tab Panel 2 </a-tab-pane>
-    <a-tab-pane key="3">
-      <template #title>Tab 3</template>
-      Content of Tab Panel 3
-    </a-tab-pane>
-  </a-tabs>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const trigger = ref('click');
-    return {
-      trigger,
-    };
-  },
-};
-</script>
-```
-
-## 示例：滚动
-
-### 说明
-支持通过滚轮或者触摸板进行滚动操作，且可以通过 `scrollPosition` 属性设置滚动位置。
-
-
-
-
-```vue
-
-<template>
-  <a-space direction="vertical" size="large">
-    <a-radio-group v-model="position" type="button">
-      <a-radio value="left">Left</a-radio>
-      <a-radio value="top">Top</a-radio>
-      <a-radio value="right">Right</a-radio>
-      <a-radio value="bottom">Bottom</a-radio>
-    </a-radio-group>
-    <a-radio-group v-model="scrollPosition" type="button">
-      <a-radio value="auto">auto</a-radio>
-      <a-radio value="start">start</a-radio>
-      <a-radio value="center">center</a-radio>
-      <a-radio value="end">end</a-radio>
-    </a-radio-group>
-    <a-button @click="changeActive"> Change: {{activeKey}}</a-button>
-  </a-space>
-  <a-tabs
-    v-model:activeKey="activeKey"
-    :position="position"
-    :scrollPosition="scrollPosition"
-    style="width: 100%;height: 300px;margin-top: 20px"
-  >
-    <a-tab-pane v-for="tab in tabs" :key="tab.key" :title="tab.title">
-      {{ tab.content }}
-    </a-tab-pane>
-  </a-tabs>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const position = ref('top');
-    const scrollPosition = ref('auto');
-    const activeKey = ref('Tab1');
-    const tabs = Array.from({ length: 30 }, (v, i) => {
-      return {
-        key: `Tab${i + 1}`,
-        title: `Tab ${i + 1}`,
-        content: `Content of Tab Panel ${i + 1}`
-      }
-    });
-
-    const changeActive = () => {
-      activeKey.value = `Tab${Math.floor(Math.random() * 30) + 1}`;
-    }
-
-    return {
-      tabs,
-      position,
-      scrollPosition,
-      activeKey,
-      changeActive
-    }
-  },
-}
-</script>
-```
-
 ## API
-
 
 ### `<tabs>` 属性
 
@@ -425,11 +47,9 @@ export default {
 |lazy-load|是否在首次展示标签时挂载内容|`boolean`|`false`||
 |justify|高度撑满容器，只在水平模式下生效。|`boolean`|`false`||
 |animation|是否开启选项内容过渡动画|`boolean`|`false`||
-|header-padding|选项卡头部是否存在水平边距。仅对 `type` 等于 `line`、`text` 类型的选项卡生效|`boolean`|`true`|2.10.0|
-|auto-switch|创建标签后是否切换到新标签（最后一个）|`boolean`|`false`|2.18.0|
-|hide-content|是否隐藏内容|`boolean`|`false`|2.25.0|
-|trigger|触发方式|`'hover' \| 'click'`|`'click'`|2.34.0|
-|scroll-position|被选中 tab 的滚动位置，默认 auto 即会将 activeTab 滚动到可见区域，但不会特意做位置调整|`'start' \| 'end' \| 'center' \| 'auto' \| number`|`'auto'`||
+
+> 仅列出常用项，低频属性按需查阅官方 API。
+
 ### `<tabs>` 事件
 
 |事件名|描述|参数|
@@ -438,14 +58,12 @@ export default {
 |tab-click|用户点击标签时触发|key: ` string \| number `|
 |add|用户点击增加按钮时触发|-|
 |delete|用户点击删除按钮时触发|key: ` string \| number `|
+
 ### `<tabs>` 插槽
 
 |插槽名|描述|参数|
 |---|:---:|---|
 |extra|选项卡额外内容|-|
-
-
-
 
 ### `<tab-pane>` 属性
 
@@ -455,8 +73,28 @@ export default {
 |disabled|是否禁用|`boolean`|`false`||
 |closable|是否允许关闭此选项卡（仅在可编辑模式生效）|`boolean`|`true`||
 |destroy-on-hide|是否在不显示标签时销毁内容|`boolean`|`false`|2.27.0|
+
 ### `<tab-pane>` 插槽
 
 |插槽名|描述|参数|
 |---|:---:|---|
 |title|选项卡标题|-|
+
+## 常用模式
+
+- **带图标的页签**：带有图标的标签页。
+- **位置**：通过 `position` 属性可以自定义标签栏的位置。
+- **不同类型**：通过 `type` 可以设置标签的类型。
+- **懒加载**：通过设置 lazy-load 属性，可以让面板在首次激活时渲染。
+- **附加内容**：通过 `extra` 插槽可以自定义额外显示内容。
+- **动态增减标签页**：通过设置 `:editable="true"` 可以开启动态增减标签页。仅在 `line` | `card` | `card-gutter` 生效
+- **触发方式**：通过 `trigger` 指定触发方式。
+- **滚动**：支持通过滚轮或者触摸板进行滚动操作，且可以通过 `scrollPosition` 属性设置滚动位置。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 数据展示组件只负责呈现，分页、筛选、排序等远程状态放在业务层维护。
+- 大数据量场景优先使用组件自带的分页、虚拟滚动或懒加载能力。

@@ -6,23 +6,11 @@ user-invocable: false
 
 # 提及 Mention
 
-来源组件：上游 `web-vue/components/mention`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-mention>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本使用
-
-### 说明
 用于在输入中提及某人或某事，常用于发布、聊天或评论功能。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -49,26 +37,7 @@ export default {
 </script>
 ```
 
-## 示例：自定义触发字符
-
-### 说明
-指定 `prefix` 来自定义触发字符。默认为 `@`，可以自定义为任意字符。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large" style="width: 100%">
-    <a-mention :data="['Bytedance', 'Bytedesign', 'Bytenumner']" placeholder="input @" />
-    <a-mention :data="['Bytedance', 'Bytedesign', 'Bytenumner']" prefix="#" placeholder="input #" />
-    <a-mention :data="['Bytedance', 'Bytedesign', 'Bytenumner']" prefix="$" placeholder="input $" />
-  </a-space>
-</template>
-```
-
 ## API
-
 
 ### `<mention>` 属性
 
@@ -82,6 +51,7 @@ export default {
 |type|输入框或文本域|`'input' \| 'textarea'`|`'input'`||
 |disabled|是否禁用|`boolean`|`false`||
 |allow-clear|是否允许清空输入框|`boolean`|`false`|2.23.0|
+
 ### `<mention>` 事件
 
 |事件名|描述|参数|版本|
@@ -92,14 +62,29 @@ export default {
 |clear|用户点击清除按钮时触发|-|2.23.0|
 |focus|文本框获取焦点时触发|ev: `FocusEvent`|2.42.0|
 |blur|文本框失去焦点时触发|ev: `FocusEvent`|2.42.0|
+
 ### `<mention>` 方法
 
 |方法名|描述|参数|返回值|版本|
 |---|---|---|---|:---|
 |focus|使输入框获取焦点|-|-|2.24.0|
 |blur|使输入框失去焦点|-|-|2.24.0|
+
 ### `<mention>` 插槽
 
 |插槽名|描述|参数|版本|
 |---|:---:|---|:---|
 |option|选项内容|data: `OptionInfo`|2.13.0|
+
+## 常用模式
+
+- **基本使用**：用于在输入中提及某人或某事，常用于发布、聊天或评论功能。
+- **自定义触发字符**：指定 `prefix` 来自定义触发字符。默认为 `@`，可以自定义为任意字符。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 需要进入表单校验或提交流程的控件，优先放在 `a-form-item` 中并绑定明确的 `field`。
+- 输入值优先使用 `v-model`；范围、弹窗类状态使用组件文档中的命名 `v-model:*`。

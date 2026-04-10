@@ -6,23 +6,11 @@ user-invocable: false
 
 # 日历 Calendar
 
-来源组件：上游 `web-vue/components/calendar`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-calendar>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本用法
-
-### 说明
 展示和选择日历
 
-
-
+## 基本用法
 
 ```vue
 
@@ -48,7 +36,6 @@ export default {
 
 ## API
 
-
 ### `<calendar>` 属性
 
 |参数名|描述|类型|默认值|
@@ -58,15 +45,30 @@ export default {
 |mode|模式|`'month' \| 'year'`|`-`|
 |default-mode|默认模式|`'month' \| 'year'`|`'month'`|
 |modes|显示的模式|`('month' \| 'year')[]`|`['month', 'year']`|
+
 ### `<calendar>` 事件
 
 |事件名|描述|参数|
 |---|---|---|
 |change|选择的日期改变时触发|date: `Date`|
 |panel-change|日期面板改变时触发|date: `Date`|
+
 ### `<calendar>` 插槽
 
 |插槽名|描述|参数|版本|
 |---|:---:|---|:---|
 |header|自定义头部内容|year: `number`<br>month: `number`|2.53.0|
 |default|自定义单元格内容|year: `number`<br>month: `number`<br>date: `number`|2.53.0|
+
+## 常用模式
+
+- **基础使用**：直接使用全局 `a-` 前缀组件，按需绑定属性、事件和插槽。
+- **受控状态**：涉及值或显隐时优先使用 `v-model` 或命名 `v-model:*`。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 数据展示组件只负责呈现，分页、筛选、排序等远程状态放在业务层维护。
+- 大数据量场景优先使用组件自带的分页、虚拟滚动或懒加载能力。

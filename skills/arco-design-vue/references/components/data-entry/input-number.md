@@ -6,23 +6,11 @@ user-invocable: false
 
 # 数字输入框 InputNumber
 
-来源组件：上游 `web-vue/components/input-number`
+## 简介
 
-## Vue 使用要点
-
-- 优先使用 Vue 3 Composition API 和 `<script setup lang="ts">`。
-- 完整注册 `app.use(ArcoVue)` 后，默认使用 `<a-input-number>` 形式的全局组件标签；也可以从 `@arco-design/web-vue` 按需导入组件并局部注册。
-- 模板中的属性使用 kebab-case，例如 `html-type`、`show-jumper`、`row-selection`。
-- 双向绑定使用 `v-model` 或组件文档中说明的命名形式，例如 `v-model:visible`。
-- 事件使用 `@event-name`，插槽使用 `#slot-name`，作用域插槽参数以组件 API 表为准。
-
-## 示例：基本用法
-
-### 说明
 通过鼠标或者键盘输入范围内的标准数值。
 
-
-
+## 基本用法
 
 ```vue
 <template>
@@ -45,167 +33,7 @@ export default {
 </script>
 ```
 
-## 示例：按钮模式
-
-### 说明
-指定 `mode` 为 `button` 来使用带按钮的数字输入框。
-
-
-
-
-```vue
-<template>
-  <a-input-number :style="{width:'320px'}" placeholder="Please Enter" :default-value="500" mode="button" class="input-demo" />
-</template>
-```
-
-## 示例：四种尺寸
-
-### 说明
-设置 `size` 可以使用四种尺寸（`mini`, `small`, `medium`, `large`）的数字输入框。高度分别对应`24px`、`28px`、`32px`、`36px`。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large">
-    <a-input-number :style="{width:'320px'}" placeholder="Please Enter" size="large" class="input-demo" />
-    <a-input-number :style="{width:'320px'}" placeholder="Please Enter" mode="button" size="large" class="input-demo" />
-  </a-space>
-</template>
-```
-
-## 示例：精度和步长
-
-### 说明
-通过 `precision` 来设置数字精度。当 `precision` 小于 `step` 的小数位时，精度取 `step` 的小数个数。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large">
-    <a-input-number :style="{width:'320px'}" placeholder="Please Enter" :default-value="3.6" :step="1.2" :precision="2" class="input-demo" />
-    <a-input-number :style="{width:'320px'}" placeholder="Please Enter" :default-value="1.22" :step="1.22" :precision="1" class="input-demo" />
-  </a-space>
-</template>
-```
-
-## 示例：前缀与后缀
-
-### 说明
-通过指定 `prefix` 和 `suffix` 插槽来在输入框内添加前缀和后缀。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large">
-    <a-input-number :style="{width:'320px'}" placeholder="Please enter something" allow-clear>
-      <template #prefix>
-        <icon-user />
-      </template>
-    </a-input-number>
-    <a-input-number :style="{width:'320px'}" placeholder="Please enter something" allow-clear hide-button>
-      <template #suffix>
-        <icon-info-circle />
-      </template>
-    </a-input-number>
-  </a-space>
-</template>
-```
-
-## 示例：自定义图标
-
-### 说明
-通过指定 `plus` 和 `minus` 插槽来修改数值增减操作的图标。
-
-
-
-
-```vue
-<template>
-  <a-space direction="vertical" size="large">
-    <a-input-number :style="{width:'320px'}" placeholder="Please enter something" allow-clear>
-       <template #plus>
-        <icon-plus />
-      </template>
-      <template #minus>
-        <icon-minus />
-      </template>
-    </a-input-number>
-  </a-space>
-</template>
-```
-
-## 示例：格式化展示值
-
-### 说明
-通过 `formatter` 和 `parser` 配合使用可以定义输入框展示值。
-
-
-
-
-```vue
-<template>
-  <a-input-number :style="{width:'320px'}" placeholder="Please Enter" class="input-demo" :default-value="12000" :min="0" :formatter="formatter" :parser="parser"/>
-</template>
-
-<script>
-export default {
-  setup(){
-    const formatter = (value) => {
-      const values = value.split('.');
-      values[0]=values[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-      return values.join('.')
-    };
-
-    const parser = (value) => {
-      return value.replace(/,/g, '')
-    };
-
-    return {
-      formatter,
-      parser
-    }
-  },
-}
-</script>
-```
-
-## 示例：v-model 的触发事件
-
-### 说明
-数字输入框默认在 blur 或者按下 Enter 时会修改绑定的值，通过设置属性 model-event="input" 让组件在输入时修改绑定的值。
-注意：在此模式下，输入时的值会超出设置的 min/max，组件会在失焦时修正值的大小。
-
-
-
-
-```vue
-<template>
-  <a-input-number v-model="value" :style="{width:'320px'}" placeholder="Please Enter" class="input-demo" :min="10" :max="100" model-event="input"/>
-  <div>value: {{value}}</div>
-</template>
-
-<script>
-export default {
-  data(){
-    return {
-      value:15
-    }
-
-  }
-}
-</script>
-```
-
 ## API
-
 
 ### `<input-number>` 属性
 
@@ -223,12 +51,9 @@ export default {
 |formatter|定义输入框展示值|`func`|`-`||
 |parser|从 `formatter` 转换为数字，和 `formatter` 搭配使用|`func`|`-`||
 |placeholder|输入框提示文字|`string`|`-`||
-|hide-button|是否隐藏按钮|`boolean`|`false`||
-|size|输入框大小|`'mini' \| 'small' \| 'medium' \| 'large'`|`'medium'`||
-|allow-clear|是否允许清空输入框|`boolean`|`false`||
-|model-event|触发 `v-model` 的事件|`'change' \| 'input'`|`'change'`||
-|read-only|只读|`boolean`|`false`|2.33.1|
-|input-attrs|内部 input 元素的属性|`object`|`-`|2.52.0|
+
+> 仅列出常用项，低频属性按需查阅官方 API。
+
 ### `<input-number>` 事件
 
 |事件名|描述|参数|版本|
@@ -239,12 +64,14 @@ export default {
 |clear|用户点击清除按钮时触发|ev: `Event`|2.23.0|
 |input|输入时触发|value: ` number \| undefined `<br>inputValue: `string`<br>ev: `Event`|2.27.0|
 |keydown|按下键盘时触发|ev: `MouseEvent`|2.56.0|
+
 ### `<input-number>` 方法
 
 |方法名|描述|参数|返回值|
 |---|---|---|---|
 |focus|使输入框获取焦点|-|-|
 |blur|使输入框失去焦点|-|-|
+
 ### `<input-number>` 插槽
 
 |插槽名|描述|参数|
@@ -255,3 +82,21 @@ export default {
 |prepend|前置标签|-|
 |suffix|后缀|-|
 |prefix|前缀|-|
+
+## 常用模式
+
+- **按钮模式**：指定 `mode` 为 `button` 来使用带按钮的数字输入框。
+- **四种尺寸**：设置 `size` 可以使用四种尺寸（`mini`, `small`, `medium`, `large`）的数字输入框。高度分别对应`24px`、`28px`、`32px`、`36px`。
+- **精度和步长**：通过 `precision` 来设置数字精度。当 `precision` 小于 `step` 的小数位时，精度取 `step` 的小数个数。
+- **前缀与后缀**：通过指定 `prefix` 和 `suffix` 插槽来在输入框内添加前缀和后缀。
+- **自定义图标**：通过指定 `plus` 和 `minus` 插槽来修改数值增减操作的图标。
+- **格式化展示值**：通过 `formatter` 和 `parser` 配合使用可以定义输入框展示值。
+- **v-model 的触发事件**：数字输入框默认在 blur 或者按下 Enter 时会修改绑定的值，通过设置属性 model-event="input" 让组件在输入时修改绑定的值。注意：在此模式下，输入时的值会超出设置的 min/max，组件会在失焦时修正值的大小。
+
+## 最佳实践
+
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 需要进入表单校验或提交流程的控件，优先放在 `a-form-item` 中并绑定明确的 `field`。
+- 输入值优先使用 `v-model`；范围、弹窗类状态使用组件文档中的命名 `v-model:*`。

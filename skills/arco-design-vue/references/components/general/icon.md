@@ -6,17 +6,11 @@ user-invocable: false
 
 # Icon 图标
 
-来源文档：
-- 上游 `packages/arco-vue-docs/pages/icon/__demo__/basic.md`
-- 上游 `packages/arco-vue-docs/pages/icon/__demo__/spin.md`
-- 上游 `packages/arco-vue-docs/pages/icon/__demo__/tree-shaking.md`
-- 上游 `packages/arco-vue-docs/pages/icon/__demo__/icon-font.md`
+## 简介
 
-Arco 图标通过独立图标入口提供。
+Icon 图标参考。用于 `@arco-design/web-vue/es/icon`、`ArcoVueIcon`、`<icon-xx>`、图标按需导入、图标属性、旋转图标和 iconfont.cn 集成。
 
-## 全局注册
-
-当应用需要使用大量 `<icon-xx>` 图标标签时，可以一次性注册图标库。
+## 基本用法
 
 ```ts
 import { createApp } from 'vue';
@@ -31,87 +25,19 @@ app.use(ArcoVueIcon);
 app.mount('#app');
 ```
 
-注册后即可使用 `<icon-check-circle />` 这类标签。
+## API
 
-```vue
-<template>
-  <a-space size="large">
-    <icon-check-circle :style="{ fontSize: '32px' }" />
-    <icon-check-circle :style="{ fontSize: '32px' }" :stroke-width="2" />
-    <icon-check-circle :style="{ fontSize: '32px' }" stroke-linecap="round" />
-    <icon-check-circle :style="{ fontSize: '32px' }" stroke-linejoin="arcs" />
-  </a-space>
-</template>
-```
+当前组件没有单独整理的 API 表。使用时优先参考组件属性、事件和插槽约定。
 
-## 按需导入
+## 常用模式
 
-只导入当前组件实际使用的图标。
+- **基础使用**：直接使用全局 `a-` 前缀组件，按需绑定属性、事件和插槽。
+- **受控状态**：涉及值或显隐时优先使用 `v-model` 或命名 `v-model:*`。
 
-```vue
-<script setup lang="ts">
-import { IconPlus, IconCheckCircle } from '@arco-design/web-vue/es/icon';
-</script>
+## 最佳实践
 
-<template>
-  <a-space size="large">
-    <IconPlus :style="{ fontSize: '32px' }" />
-    <IconCheckCircle :style="{ fontSize: '32px' }" />
-  </a-space>
-</template>
-```
-
-## 旋转图标
-
-通过设置 `spin` 可以让图标处于旋转状态；也可以使用 `rotate` 自定义旋转角度。
-
-```vue
-<template>
-  <a-space size="large">
-    <icon-refresh :style="{ fontSize: '32px' }" spin />
-    <icon-sync :style="{ fontSize: '32px' }" spin />
-    <icon-face-smile-fill :style="{ fontSize: '32px' }" :rotate="180" />
-  </a-space>
-</template>
-```
-
-## 图标属性
-
-| 属性 | 说明 | 类型 | 默认值 |
-|---|---|---|---|
-| `strokeWidth` | 线宽 | `number` | `4` |
-| `strokeLinecap` | 端点类型 | `'butt' \| 'round' \| 'square'` | `'butt'` |
-| `strokeLinejoin` | 拐角类型 | `'arcs' \| 'bevel' \| 'miter' \| 'miter-clip' \| 'round'` | `'miter'` |
-| `rotate` | 旋转角度 | `number` | `-` |
-| `spin` | 是否旋转 | `boolean` | `false` |
-| `size` | 尺寸 | `number \| string` | `-` |
-
-## iconfont.cn
-
-使用 `Icon.addFromIconFontCn` 接入 iconfont.cn 的 symbol 项目。
-
-```vue
-<script setup lang="ts">
-import { Icon } from '@arco-design/web-vue';
-
-const IconFont = Icon.addFromIconFontCn({
-  src: 'https://at.alicdn.com/t/font_180975_ue66sq60vyd.js',
-});
-</script>
-
-<template>
-  <a-space size="large">
-    <IconFont type="icon-person" :size="32" />
-    <IconFont type="icon-earth" :size="32" />
-  </a-space>
-</template>
-```
-
-`IconFontOptions`：
-
-| 参数 | 说明 | 类型 | 默认值 |
-|---|---|---|---|
-| `src` | iconfont.cn 项目生成的在线 JS 地址 | `string` | `-` |
-| `extraProps` | 传递给内部 Icon 组件的额外属性 | `object` | `-` |
-
-iconfont.cn 集成暂不支持按需加载。
+- 新代码优先使用 Vue 3、Composition API 和 `<script setup lang="ts">`。
+- 模板属性使用 kebab-case，事件使用 `@event-name`，插槽使用 `#slot-name`。
+- 不要套用 React 专属 API，例如 JSX children、`Component.Sub` 或 `Form.useForm`。
+- 基础组件保持语义清晰，主操作、次操作和危险操作要用不同 `type` 或 `status` 区分。
+- 图标、按钮、链接等交互元素要同时考虑禁用、加载和可访问文本。
